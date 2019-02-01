@@ -19,7 +19,7 @@ class Item extends React.Component {
         {item.image && <img src={item.image} alt={item.title}/>}
         <Title>
           <Link href={{
-            pathname: '/item',
+            pathname: '/Item',
             query: { id: item.id }
           }}>
             <a>{item.title}</a>
