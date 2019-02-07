@@ -44,7 +44,6 @@ class CreateItem extends React.Component {
   }
 
   uploadFile = async (e) => {
-    console.log(e)
     const files = e.target.files;
     const data = new FormData();
     data.append('file', files[0]);
@@ -72,7 +71,7 @@ class CreateItem extends React.Component {
           e.preventDefault();
           const res = await createItem();
           Router.push({
-            pathname: '/item',
+            pathname: '/Item',
             query: {
               id: res.data.createItem.id
             }
